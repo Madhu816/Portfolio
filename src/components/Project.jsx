@@ -40,7 +40,9 @@ function Project() {
         "Showcases skills, projects, and achievements.",
       ],
       technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "YouTube Data API v3",],
-      images: ["/madhu.jpg", "/madhu.jpg"],
+      liveDemo:"https://portfolio-m2lwpaiap-madhu816s-projects.vercel.app",
+      sourceCode: "https://github.com/Madhu816/Portfolio",
+      images: ["/portfolio_1.png", "/portfolio_2.png", "/portfolio_3.png"],
     },
   ];
 
