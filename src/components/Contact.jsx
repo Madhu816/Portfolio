@@ -107,7 +107,7 @@ const Contact = () => {
         </div>
 
         <footer className="text-center mt-10 mb-4 text-gray-600">
-          &copy; 2024 P.Madhu. All rights reserved.
+          &copy; {new Date().getFullYear()} P.Madhu. All rights reserved.
         </footer>
       </div>
     </>
