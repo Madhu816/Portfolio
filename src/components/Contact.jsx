@@ -25,7 +25,7 @@ const Contact = () => {
     <>
       <div name="contact">
         <h1 className="mt-10 text-4xl font-bold text-green-700 text-center">
-          Contact Us
+          Contact Me
         </h1>
 
         <p className="text-center mt-4 max-w-md mx-auto border border-gray-500 p-2 rounded-xl">
