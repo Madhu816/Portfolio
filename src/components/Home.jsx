@@ -34,7 +34,6 @@ function Home() {
   {/* Resume Button */}
   <button className=" bg-blue-400 text-white md:px-5 py-3 rounded-xl cursor-pointer px-3 hover:bg-blue-500 shadow-md">
     <a
-      href="/Resume_22-06.pdf"
       target="_blank"
       className="flex items-center gap-2"
     >
