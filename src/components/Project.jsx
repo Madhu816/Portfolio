@@ -7,17 +7,17 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 function Project() {
   const projects = [
     {
-      title: "Swiggy Food Delivery App",
+      title: "AI-Powered Food Recommendation System",
       description: [
-        "Developed a full-stack food delivery platform with restaurant and menu browsing.",
-        "Add, remove, and update items in the shopping cart.",
-        "Built responsive frontend and scalable backend using the MERN stack.",
+        "Developed a full-stack food ordering platform with restaurant, food, and menu management using the MERN stack.",
+        "Integrated OpenRouter API to provide AI-powered food recommendations based on user preferences and food choices.",
+        "Implemented JWT authentication, REST APIs, product management, and responsive user/admin interfaces.",
       ],
-      liveDemo: "https://swiggy-mern-project-wyvq.vercel.app/",
-      sourceCode: "https://github.com/Madhu816/Swiggy-MERN-Project",
+      liveDemo: "https://ai-powered-food-recommendation-syst-pink.vercel.app/",
+      sourceCode: "https://github.com/Madhu816",
       technologies: [
-        "React.js","Node.js","Express.js","MongoDB","JWT","HTML5", "CSS3"],
-      images: ["/swiggy-1.png", "/swiggy-2.png", "/swiggy-3.png","/swiggy-4.png","/swiggy-5.png","/swiggy-6.png"],
+        "React.js", "Node.js", "Express.js", "MongoDB","OpenRouter API", "node-modules", "JWT", "HTML5", "CSS3"],
+      images: ["/swiggy-1.png", "/swiggy-2.png", "/swiggy-3.png", "/swiggy-4.png", "/swiggy-5.png", "/swiggy-6.png"],
     },
     {
       title: "YouTube Clone",
@@ -40,7 +40,7 @@ function Project() {
         "Showcases skills, projects, and achievements.",
       ],
       technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "YouTube Data API v3",],
-      liveDemo:"https://portfolio-588wehjx5-madhu816s-projects.vercel.app",
+      liveDemo: "https://portfolio-588wehjx5-madhu816s-projects.vercel.app",
       sourceCode: "https://github.com/Madhu816/Portfolio",
       images: ["/portfolio_1.png", "/portfolio_2.png", "/portfolio_3.png"],
     },
