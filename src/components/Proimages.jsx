@@ -15,28 +15,32 @@ const Proimages = ({ images }) => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-full ">
+    <div className="flex flex-col items-center gap-4">
+      <div className="flex w-full items-center justify-between">
+        <button
+          onClick={prevImage}
+          aria-label="Previous screenshot"
+          className="rounded-full bg-white/90 p-1 text-2xl text-slate-700 shadow transition hover:bg-emerald-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 md:text-3xl"
+        >
+          <IoIosArrowDropleft />
+        </button>
 
-      <button
-        onClick={prevImage}
-        className="absolute left-2 text-3xl text-gray-700 hover:text-blue-600 cursor-pointer z-10"
-      >
-        <IoIosArrowDropleft />
-      </button>
+        <button
+          onClick={nextImage}
+          aria-label="Next screenshot"
+          className="rounded-full bg-white/90 p-1 text-2xl text-slate-700 shadow transition hover:bg-emerald-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 md:text-3xl"
+        >
+          <IoIosArrowDropright />
+        </button>
+      </div>
 
-      <img
-        className="w-[400px] h-[210px] object-contain rounded-2xl shadow-lg  px-1 py-1 bg-black border border-red-700 md:mt-[-30px]"
-        src={images[current]}
-        alt={`Project ${current + 1}`}
-      />
-
-      <button
-        onClick={nextImage}
-        className="absolute right-2 text-3xl text-gray-700 hover:text-blue-600 cursor-pointer z-10"
-      >
-        <IoIosArrowDropright />
-      </button>
-
+      <div className="flex min-h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-3 shadow-inner">
+        <img
+          className="max-h-72 w-full rounded-lg object-contain"
+          src={images[current]}
+          alt={`Project ${current + 1}`}
+        />
+      </div>
     </div>
   );
 };

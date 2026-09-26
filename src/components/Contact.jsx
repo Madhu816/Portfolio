@@ -23,7 +23,7 @@ const Contact = () => {
 
   return (
     <>
-      <div name="contact">
+      <section name="contact" className="flex min-h-screen w-full flex-col justify-center px-5 py-24">
         <h1 className="mt-10 text-4xl font-bold text-green-700 text-center">
           Contact Me
         </h1>
@@ -36,7 +36,7 @@ const Contact = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="w-[350px] md:w-[500px] px-5 py-3 rounded-xl bg-slate-200 shadow-lg"
+            className="w-87.5 rounded-xl bg-slate-200 px-5 py-3 shadow-lg md:w-125"
           >
             <h1 className="text-2xl font-bold text-blue-500 mb-4">
               Send Your Message
@@ -109,7 +109,7 @@ const Contact = () => {
         <footer className="text-center mt-10 mb-4 text-gray-600">
           &copy; {new Date().getFullYear()} P.Madhu. All rights reserved.
         </footer>
-      </div>
+      </section>
     </>
   );
 };

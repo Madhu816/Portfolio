@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Proimages from "./Proimages";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 function Project() {
   const projects = [
@@ -17,7 +19,16 @@ function Project() {
       sourceCode: "https://github.com/Madhu816",
       technologies: [
         "React.js", "Node.js", "Express.js", "MongoDB","OpenRouter API", "node-modules", "JWT", "HTML5", "CSS3"],
-      images: ["/swiggy-1.png", "/swiggy-2.png", "/swiggy-3.png", "/swiggy-4.png", "/swiggy-5.png", "/swiggy-6.png"],
+      images: [
+        "/ai_pow_mern0.jpg",
+        "/ai_pow_mern1.jpg",
+        "/ai_pow_mern2.jpg",
+        "/ai_pow_mern3.jpg",
+        "/ai_pow_mern4.jpg",
+        "/ai_pow_mern5.jpg",
+        "/ai_pow_mern6.jpg",
+        "/ai_pow_mern7.jpg",
+      ],
     },
     {
       title: "YouTube Clone",
@@ -28,7 +39,7 @@ function Project() {
       ],
       liveDemo: "https://youtube-cyan-three.vercel.app/",
       sourceCode: "https://github.com/Madhu816/Youtube",
-      technologies: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML/CSS"],
+      technologies: ["React.js", "YouTube Data API v3", "JavaScript (ES6+)", "Tailwind CSS", "HTML/CSS"],
       images: ["/yt-1.png", "/yt-2.png", "/yt-3.png"],
     },
 
@@ -40,7 +51,7 @@ function Project() {
         "Showcases skills, projects, and achievements.",
       ],
       technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "YouTube Data API v3",],
-      liveDemo: "https://portfolio-588wehjx5-madhu816s-projects.vercel.app",
+      liveDemo: "https://portfolio-khaki-ten-nvlt5loduh.vercel.app/",
       sourceCode: "https://github.com/Madhu816/Portfolio",
       images: ["/portfolio_1.png", "/portfolio_2.png", "/portfolio_3.png"],
     },
@@ -49,12 +60,12 @@ function Project() {
   const [projectIndex, setProjectIndex] = useState(0);
 
   const nextProject = () => {
-    setProjectIndex((projectIndex + 1) % projects.length);
+    setProjectIndex((currentIndex) => (currentIndex + 1) % projects.length);
   };
 
   const prevProject = () => {
-    setProjectIndex(
-      (projectIndex - 1 + projects.length) % projects.length
+    setProjectIndex((currentIndex) =>
+      (currentIndex - 1 + projects.length) % projects.length
     );
   };
 
@@ -62,84 +73,89 @@ function Project() {
 
   return (
     <>
-      <div name="projects">
-        <h1 className="text-4xl font-bold text-green-700 mt-10 text-center">
+      <section name="projects" className="w-full bg-slate-50 px-5 py-16 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+
+        <h1 className="text-center text-4xl font-bold text-green-700 md:text-5xl">
           Projects
         </h1>
-        <p className="text-gray-600 text-center mt-4 max-w-3xl mx-auto">
-          A collection of projects that reflect my passion for software development, problem-solving, and building impactful applications using modern technologies.
-        </p>
+      <p className="mx-auto mt-4 max-w-2xl text-center text-gray-600">
+  A showcase of projects where I apply my technical skills to solve real-world problems,
+  explore new technologies, and build responsive, user-friendly applications.
+</p>
 
-        {/* Top Navigation */}
-        <div className="flex justify-center items-center gap-6 mt-8">
-          <button onClick={prevProject}>
-            <IoIosArrowDropleft className="text-3xl md:text-5xl cursor-pointer" />
+        <div className="mt-10 flex items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm md:px-6">
+          <button
+            onClick={prevProject}
+            aria-label="Previous project"
+            className="rounded-full p-2 text-2xl text-slate-500 transition hover:bg-emerald-50 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 md:text-3xl"
+          >
+            <IoIosArrowDropleft />
           </button>
 
-          <h2 className=" text-sm md:text-2xl font-bold">
-            Project {projectIndex + 1} / {projects.length} : <span className="text-sm text-blue-600 md:text-2xl border border-yellow-500 px-3 rounded-2xl ">{project.title}</span>
+          <h2 className="text-center text-sm font-bold md:text-2xl">
+            <span className="text-green-700">Project {projectIndex + 1}</span>
+            <span className="mx-2 text-slate-400">/</span>
+            <span className="text-slate-700">{projects.length}</span>
+            <span className="mx-2 text-slate-400">:</span>
+            <span className="rounded-2xl px-3 py-1 text-sm text-orange-600 md:text-2xl">
+              {project.title}
+            </span>
           </h2>
 
-          <button onClick={nextProject}>
-            <IoIosArrowDropright className="text-3xl md:text-5xl cursor-pointer" />
+          <button
+            onClick={nextProject}
+            aria-label="Next project"
+            className="rounded-full p-2 text-2xl text-slate-500 transition hover:bg-emerald-50 hover:text-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 md:text-3xl"
+          >
+            <IoIosArrowDropright />
           </button>
         </div>
 
-        {/* Project Card */}
-        <div className="mt-10 w-[85%] mx-auto border border-gray-300 rounded-2xl shadow-lg p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+        <article className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]">
+          <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr]">
+            <div className="p-6 md:p-10">
+              <p className="mb-4 text-sm font-medium text-orange-700">Featured project</p>
+              <h3 className="mx-auto block w-fit rounded-xl px-3 py-1 text-2xl font-bold text-black-600 md:text-3xl">
+                {project.title}
+              </h3>
 
-            {/* Left */}
-            <div className="border border-gray-300 rounded-xl p-6">
-              <div className="text-center">
-                <h1 className=" text-xl inline-block md:text-2xl font-bold border border-black px-4 py-2 rounded-lg">
-                  {project.title}
-                </h1>
-              </div>
-
-              <ul className="list-disc pl-6 space-y-4 mt-6 text-gray-700">
+              <ul className="mt-7 list-disc space-y-3 pl-6 text-left text-base text-gray-700 md:text-lg">
                 {project.description.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-              <div className="grid grid-cols-2  md:grid-cols-4 gap-4 mt-6">
+
+              <div className="mt-8 flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
-                  <button
+                  <span
                     key={index}
-                    className="bg-green-400 text-white px-2 py-1 rounded-xl text-sm text-center hover:bg-green-600"
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
                   >
                     {tech}
-                  </button>
+                  </span>
                 ))}
-
               </div>
 
-              <div className="flex gap-4 mt-8">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-800">
-                  <a href={project.liveDemo} target="_blank">
-                    Live Demo
-                  </a>
-                </button>
-
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-800">
-                  <a href={project.sourceCode} target="_blank">
-                    Source Code
-                  </a>
-                </button>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <a href={project.liveDemo} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-600 px-5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  <FiExternalLink aria-hidden="true" className="text-base" />
+                  Live demo
+                </a>
+                <a href={project.sourceCode} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-600 px-5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  <FaGithub aria-hidden="true" className="text-base" />
+                  Source code
+                </a>
               </div>
             </div>
 
-            {/* Right */}
-            <div className="flex justify-center">
+            <div className="flex min-h-70 items-center justify-center border-t border-slate-200 bg-white p-5 md:min-h-full md:border-l md:border-t-0 md:p-8">
               <Proimages images={project.images} />
             </div>
-
           </div>
+        </article>
         </div>
-      </div>
-      <br />
-      <br />
-      <hr />
+      </section>
     </>
   );
 }
