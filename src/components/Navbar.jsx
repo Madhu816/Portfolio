@@ -35,7 +35,7 @@ function Navbar() {
 
                 <div className="flex items-center gap-4">
                     <img
-                        src="/photo.jpeg"
+                        src="myphoto.jpeg"
                         className="w-10 h-10 rounded-full object-cover"
                         // style={{ objectPosition: "0px -20px" }}
 
