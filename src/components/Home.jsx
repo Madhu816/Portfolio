@@ -79,7 +79,7 @@ function Home() {
 
                     </div>
                     <div className="md:w-1/2 flex justify-center order-1 md:order-2">
-                        <img className="w-72 h-72 rounded-full object-cover " src="/photo.jpeg"
+                        <img className="w-72 h-72 rounded-full object-cover " src="/myphoto.jpeg"
                             // style={{ objectPosition: "30px 50px" }}
                         />
                     </div>
