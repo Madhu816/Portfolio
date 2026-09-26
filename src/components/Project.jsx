@@ -130,7 +130,7 @@ function Project() {
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
+                    className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700"
                   >
                     {tech}
                   </span>
